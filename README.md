@@ -15,8 +15,6 @@ There is no API provided by the city for the drop-in activities and the data for
 
 Download the app on [AppStore](https://readshelf-web.herokuapp.com).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Built With
 
 * Java
@@ -43,7 +41,7 @@ Please follow the instructions below to get started with Active.
     ```
 * Change your current directory
     ```sh
-    cd Active-Docker
+    cd active-docker
     ```
 * Enter your keys in `.env` file
     ```conf
@@ -69,6 +67,10 @@ Emrah Kinay - [@emrahkinay](https://www.linkedin.com/in/emrahkinay/)
 
 Project Link: [https://github.com/simulacrumus/active-docker](https://github.com/simulacrumus/active-docker)
 
-AppStore Link: [https://readshelf-web.herokuapp.com](https://readshelf-web.herokuapp.com)
+<div align="left">
+  <a href="https://readshelf-web.herokuapp.com/">
+    <img src="https://raw.githubusercontent.com/simulacrumus/active-docker/004fd47aa274828367735fbbd85d5c9d4e9c0905/Download_on_the_App_Store_Badge_EE_RGB_blk_100217.svg" alt="AppStore Download">
+  </a>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
