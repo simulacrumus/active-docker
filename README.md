@@ -69,7 +69,7 @@ Project Link: [https://github.com/simulacrumus/active-docker](https://github.com
 
 <div align="left">
   <a href="https://readshelf-web.herokuapp.com/">
-    <img src="https://raw.githubusercontent.com/simulacrumus/active-docker/004fd47aa274828367735fbbd85d5c9d4e9c0905/Download_on_the_App_Store_Badge_EE_RGB_blk_100217.svg" alt="AppStore Download">
+    <img src="https://raw.githubusercontent.com/simulacrumus/active-docker/004fd47aa274828367735fbbd85d5c9d4e9c0905/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917" alt="AppStore Download">
   </a>
 </div>
 
