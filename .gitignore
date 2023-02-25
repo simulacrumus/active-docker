@@ -1,0 +1,8 @@
+.idea
+.vscode/
+scraper/env/
+scraper/venv/
+scraper/__pycache__/
+server/target/
+server/build/
+.DS_Store
