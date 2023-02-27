@@ -1,4 +1,5 @@
 from scraper import *
+from util import *
 import datetime
 import logging
 

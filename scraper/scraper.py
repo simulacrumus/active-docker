@@ -11,7 +11,6 @@ SUBMISSION_URL_PREFIX = "rcfs/"
 BASE_URL = "https://ottawa.ca"
 FACILITIES_LIST_BASE_URL = "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/place-listing?text=&page="
 BASE_URL = "https://ottawa.ca"
-NUM_OF_PAGES = 4 # Number of pages for facilities list
 
 # Scrape all activity titles from facility's reservation page
 def scrape_activity_titles(url:str):
@@ -64,34 +63,36 @@ def scrape_activity_details(url, activity_title, submission_link):
 def scrape_all_facilities():
     logging.info('Scraping facilities..')
     all_facilities = []
-    for i in range(NUM_OF_PAGES):
-        url = FACILITIES_LIST_BASE_URL + str(i)
-        facilities_for_url = scrape_facilities(url)
-        for facility in facilities_for_url:
-            all_facilities.append(facility)
+    try:
+        pageNumber = 0
+        while True:
+            url = FACILITIES_LIST_BASE_URL + str(pageNumber)
+            facilities_for_url = scrape_facilities(url)
+            for facility in facilities_for_url:
+                all_facilities.append(facility)
+            pageNumber += 1
+    except(ConnectionError, Exception) as e:
+        logging.warning(e)
     return all_facilities
 
 # Scrape facilities information from list of facilities page
 def scrape_facilities(url:str):
-    try:
-        facilities = []
-        session = requests.Session()
-        response = session.get(url)
-        soup = BeautifulSoup(response.content, 'html.parser')
-        facility_list = soup.find("tbody").find_all("tr")
-        for facility in facility_list:
-            fc = {}
-            fc["url"] = BASE_URL+facility.find("a").attrs.get("href")
-            fc["title"] = facility.find("a").string
-            fc["address"] = ""
-            address_fields = facility.find("p", {"class":"address"}).find_all("span")
-            for field in address_fields:
-                fc["address"] += field.string+" "
-            fc["address"] = fc["address"].strip()
-            facilities.append(fc)
-        return facilities
-    except(ConnectionError, Exception) as e:
-        logging.warning(e)
+    facilities = []
+    session = requests.Session()
+    response = session.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    facility_list = soup.find("tbody").find_all("tr")
+    for facility in facility_list:
+        fc = {}
+        fc["url"] = BASE_URL+facility.find("a").attrs.get("href")
+        fc["title"] = facility.find("a").string
+        fc["address"] = ""
+        address_fields = facility.find("p", {"class":"address"}).find_all("span")
+        for field in address_fields:
+            fc["address"] += field.string+" "
+        fc["address"] = fc["address"].strip()
+        facilities.append(fc)
+    return facilities
 
 # Scrape facility details from facility's home page
 def scrape_facility_details(url:str):
