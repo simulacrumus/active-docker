@@ -398,7 +398,8 @@ VALUES
 (189,'Ringette - Child',49),
 (190,'Ringette - Adult',49),
 (191,'Ringette - Youth',49),
-(192,'Soccer - Adult',25);
+(192,'Soccer - Adult',25),
+(193,'Squash - Court 6',24);
 UNLOCK TABLES;
 
 --
@@ -866,5 +867,10 @@ VALUES
 (51,192),
 (51,90),
 (51,125),
-(51,100);
+(51,100),
+(45,142),
+(45,143),
+(45,144),
+(45,145),
+(45,79);
 UNLOCK TABLES;
