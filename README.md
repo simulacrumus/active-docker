@@ -32,14 +32,14 @@ Download the app on [AppStore](https://readshelf-web.herokuapp.com).
 Please follow the instructions below to get started with Active.
 
 ### Prerequisites
-* Docker `20.10.20` Build `9fdeb9c`
+* Docker `20.10.20` or newer version
 
 ### Installation
 * Clone the repo
     ```sh
     git clone https://github.com/simulacrumus/active-docker
     ```
-* Change your current directory
+* Change your directory
     ```sh
     cd active-docker
     ```
@@ -68,7 +68,7 @@ Emrah Kinay - [@emrahkinay](https://www.linkedin.com/in/emrahkinay/)
 Project Link: [https://github.com/simulacrumus/active-docker](https://github.com/simulacrumus/active-docker)
 
 <div align="left">
-  <a href="https://readshelf-web.herokuapp.com/">
+  <a href="https://apps.apple.com/ca/app/active/id6445869038">
     <img src="https://raw.githubusercontent.com/simulacrumus/active-docker/b34e74ed74f9a552ceac620087c1eb40eb67a312/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="AppStore Download">
   </a>
 </div>
